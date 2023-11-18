@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Smartwatch Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section.faq {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        section.faq h2 {
+            color: #333;
+        }
+
+        .accordion {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .panel {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 8px 0;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-heading {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .panel-body {
+            padding: 15px;
+            display: none;
+        }
+
+        .panel.active .panel-body {
+            display: block;
+        }
+
+        .panel-heading:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>FAQ - Smartwatch Hub</h1>
+    </header>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+            <div class="panel">
+                <div class="panel-heading">How to pair my smartwatch with a device?</div>
+                <div class="panel-body">
+                    <p>Follow the instructions in the user manual to pair your smartwatch with your device via Bluetooth.</p>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-heading">Can I change the watch face?</div>
+                <div class="panel-body">
+                    <p>Yes, most of our smartwatches support customizable watch faces. You can change them through the
+                        companion app.</p>
+                </div>
+            </div>
+
+            <!-- Add more FAQ items as needed -->
+
+        </div>
+    </section>
+
+    <script>
+        const panels = document.querySelectorAll('.panel');
+
+        panels.forEach(panel => {
+            panel.addEventListener('click', () => {
+                panel.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
